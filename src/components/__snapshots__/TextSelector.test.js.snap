@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color input component renders a ColorSelector 1`] = `
+<Fragment>
+  <input
+    name="text"
+    type="text"
+    value=""
+  />
+</Fragment>
+`;

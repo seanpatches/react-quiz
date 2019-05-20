@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shape input component renders a Shape 1`] = `
+<Fragment>
+  <p
+    style={
+      Object {
+        "color": Object {
+          "color": "red",
+        },
+      }
+    }
+  >
+    test
+  </p>
+  <div
+    style={
+      Object {
+        "backgroundColor": Object {
+          "backgroundColor": "blue",
+        },
+        "height": 200,
+        "width": 100,
+      }
+    }
+  />
+</Fragment>
+`;
