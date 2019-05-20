@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 function Shape({ color, backgroundColor, text }){
   return ( 
     <>
-      <p style={{ color: { color } }}>{text}</p>
-      <div style={{ width: 100, height: 200, backgroundColor: { backgroundColor } }}></div>
+      <p style={{ color:  color  }}>{text}</p>
+      <div style={{ width: 300, height: 200, backgroundColor:  backgroundColor  }}>Hi</div>
     </>
   );
 }
