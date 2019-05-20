@@ -1,24 +1,18 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class ColorSelector extends PureComponent {
-
-  state = {
-    backgroundColor: '',
-    color: ''
-  }
-
-  changeHandler = ({ target }) => {
-    this.setState({ [target.name]: target.value });
-  }
-
-  render() {
-    const { backgroundColor, color } = this.state;
-
-    return (
+function ColorSelector({ changeHandler }){
+  return (
       <>
-      <input name="color" type="color" value={ color } onChange={this.changeHandler}/>
-      <input name="backgroundColor" type="color" value={ backgroundColor } onChange={this.changeHandler}/>
+      <input name="color" type="color" onChange={changeHandler}/>
+      <input name="backgroundColor" type="color" onChange={changeHandler}/>
       </>
-    );
-  }
+  );
 }
+
+
+ColorSelector.propTypes = {
+  changeHandler: PropTypes.func.isRequired
+};
+
+export default ColorSelector;

@@ -1,22 +1,18 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class TextSelector extends PureComponent {
+function TextSelector({ changeHandler }) {
 
-  state = {
-    text: ''
-  }
 
-  changeHandler = ({ target }) => {
-    this.setState({ [target.name]: target.value });
-  }
-
-  render() {
-    const { text } = this.state;
-
-    return (
+  return (
       <>
-      <input name="text" type="text" value={ text } onChange={this.changeHandler} />
+      <input name="text" type="text" onChange={changeHandler} />
       </>
-    );
-  }
+  );
+
 }
+TextSelector.propTypes = {
+  changeHandler: PropTypes.func.isRequired
+};
+
+export default TextSelector;
